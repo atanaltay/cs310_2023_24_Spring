@@ -18,7 +18,23 @@ public class Dog extends Animal{
 		super(name, habitat, furColor);
 		this.species = species;
 		this.favToy = favToy;
+		System.out.println("Dog constructor");
 	}
+	
+	//Method overriding
+	//Annotations
+	@Override
+	public void makeSound() {
+		
+		System.out.println("Dog: Bark bark bark!");
+		
+	}
+	
+	@Override
+		public void getFed() {
+			System.out.println("Dog is getting fed with dog food..");
+		}
+	
 	public String getSpecies() {
 		return species;
 	}

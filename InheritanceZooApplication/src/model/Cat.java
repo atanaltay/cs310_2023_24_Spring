@@ -1,6 +1,6 @@
 package model;
 
-public class Cat extends Animal{
+public abstract class Cat extends Animal{
 	
 	/*
 	 * Cat (extends Animal)
@@ -12,6 +12,7 @@ public class Cat extends Animal{
 	public Cat(String name, String habitat, String furColor, String favFood) {
 		super(name, habitat, furColor);
 		this.favFood = favFood;
+		System.out.println("Cat constructor");
 	}
 	
 	public void setFavFood(String favFood) {

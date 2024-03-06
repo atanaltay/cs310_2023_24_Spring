@@ -1,6 +1,6 @@
 package model;
 
-public class Animal{
+public abstract class Animal{
 
 	/**
 	 * Animal (Super type, top level class)
@@ -14,13 +14,22 @@ public class Animal{
 	private String furColor;
 	
 
-	
+
 	public Animal(String name, String habitat, String furColor) {
 		super();
 		this.name = name;
 		this.habitat = habitat;
 		this.furColor = furColor;
+		System.out.println("Animal constructor");
 	}
+	
+	//abstract method: without body, must be implemented in the first concrete
+	//class
+	public abstract void makeSound();
+	
+	public abstract void getFed();
+	
+	
 	public String getName() {
 		return name;
 	}
