@@ -11,14 +11,27 @@ public class MainClass2 {
 		Product p4 = new Product(3, "laptop",2000);
 		Product p5 = p1;
 		
-		
-		if(p1==p2) {
-			System.out.println("p1 equal to p2");
+		//equals operator
+		if(p3==p4) {
+			System.out.println("p3 equal to p4");
 		}else System.out.println("Not equal");
 		
 		if(p1==p5) {
-			System.out.println("p1 equal to p2");
+			System.out.println("p3 equal to p4");
 		}else System.out.println("Not equal");
+		
+		
+		System.out.println("------------");
+		//overridden equals
+		
+		if(p3.equals(p4)) {
+			System.out.println("p3 equal to p4");
+		}else System.out.println("Not equal");
+		
+		if(p1.equals(p5)) {
+			System.out.println("p1 equal to p5");
+		}else System.out.println("Not equal");
+		
 		
 		
 	}

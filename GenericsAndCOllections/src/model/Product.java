@@ -1,7 +1,7 @@
 package model;
 
-
-public class Product {
+//Comparable and Comparator
+public class Product implements Comparable<Product>{
 
 	private int id;
 	private String name;
@@ -47,10 +47,49 @@ public class Product {
 	}
 
 
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (obj instanceof Product) {
+			if(this.id == ((Product)obj).getId()) {
+				return true;
+			}
+		}
+
+		return false;
+			
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
 
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+
+
+	// -1 -> this object less than o
+	// 1 -> this object greater than o
+	// 0-> this is same as o
+	@Override
+	public int compareTo(Product o) {
+		
+		/*
+		if(this.id<o.getId()) {
+			return 1;
+		}else if(this.id>o.getId()) {
+			return -1;
+		}
+		
+		return 0;
+		
+		*/
+		
+		return -1*Integer.valueOf(id).compareTo(o.getId());
 	}
 	
 	
